@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Kumbh+Sans:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@200;300;400;700&display=swap");
 *,
 *::after,
 *::before {
@@ -77,7 +77,7 @@ body {
   font-size: 24px;
   text-transform: uppercase;
   letter-spacing: 3px;
-  font-weight: var(--fw-regular);
+  font-weight: var(--fw-bold);
 }
 @media (min-width: 62.5em) {
   .faq-accordion {
@@ -100,6 +100,10 @@ body {
   display: grid;
   row-gap: 1rem;
 }
+.accordion__question {
+  font-weight: var(--fw-regular);
+  transition: font-weight 0.3s ease;
+}
 .accordion__answer {
   max-height: 0;
   opacity: 0;
@@ -117,6 +121,10 @@ body {
   width: 15px;
   height: 15px;
 }
+.accordion__arrow > img {
+  transform: rotate(0);
+  transition: transform 0.3s ease;
+}
 .accordion__checkbox {
   position: absolute;
   top: 0;
@@ -125,11 +133,16 @@ body {
   height: 0;
   opacity: 0;
 }
+.accordion__checkbox:checked ~ label > button > img {
+  transform: rotate(180deg);
+}
 .accordion__checkbox:checked ~ .accordion__qa-box > .accordion__answer {
   max-height: 100px;
   opacity: 1;
   z-index: 1;
-  color: var(--clr-text-ter);
+}
+.accordion__checkbox:checked ~ .accordion__qa-box > .accordion__question {
+  font-weight: var(--fw-bold);
 }
 
 /*# sourceMappingURL=style.css.map */

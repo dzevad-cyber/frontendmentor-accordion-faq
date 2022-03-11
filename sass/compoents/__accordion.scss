@@ -18,6 +18,11 @@
     row-gap: 1rem;
   }
 
+  &__question {
+    font-weight: var(--fw-regular);
+    transition: font-weight 0.3s ease;
+  }
+
   &__answer {
     max-height: 0;
     opacity: 0;
@@ -37,6 +42,11 @@
     pointer-events: none;
     width: 15px;
     height: 15px;
+
+    & > img {
+      transform: rotate(0);
+      transition: transform 0.3s ease;
+    }
   }
 
   &__checkbox {
@@ -48,10 +58,17 @@
     opacity: 0;
   }
 
+  &__checkbox:checked ~ label > button > img {
+    transform: rotate(180deg);
+  }
+
   &__checkbox:checked ~ .accordion__qa-box > .accordion__answer {
     max-height: 100px;
     opacity: 1;
     z-index: 1;
-    color: var(--clr-text-ter);
+  }
+
+  &__checkbox:checked ~ .accordion__qa-box > .accordion__question {
+    font-weight: var(--fw-bold);
   }
 }
