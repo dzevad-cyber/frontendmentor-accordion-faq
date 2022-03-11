@@ -6,15 +6,25 @@
   background-color: var(--bg-faq-accordion);
   border-radius: 30px;
   padding: 2.5rem 2rem;
+  position: relative;
+
+  &__header {
+    position: absolute;
+    top: -130px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+  }
 
   &__body {
     display: grid;
     justify-items: center;
     row-gap: 3rem;
+    margin-top: 140px;
   }
 
   &__title {
-    font-size: 24px;
+    font-size: var(--fz-title);
     text-transform: uppercase;
     letter-spacing: 3px;
     font-weight: var(--fw-bold);
