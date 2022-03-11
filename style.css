@@ -103,6 +103,11 @@ body {
 .accordion__question {
   font-weight: var(--fw-regular);
   transition: font-weight 0.3s ease;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.accordion__question:hover {
+  color: var(--clr-arrow);
 }
 .accordion__answer {
   max-height: 0;
@@ -141,7 +146,7 @@ body {
   opacity: 1;
   z-index: 1;
 }
-.accordion__checkbox:checked ~ .accordion__qa-box > .accordion__question {
+.accordion__checkbox:checked ~ .accordion__qa-box > label > .accordion__question {
   font-weight: var(--fw-bold);
 }
 

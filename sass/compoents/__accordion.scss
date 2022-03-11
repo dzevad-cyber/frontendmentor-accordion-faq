@@ -21,6 +21,12 @@
   &__question {
     font-weight: var(--fw-regular);
     transition: font-weight 0.3s ease;
+    cursor: pointer;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: var(--clr-arrow);
+    }
   }
 
   &__answer {
@@ -68,7 +74,7 @@
     z-index: 1;
   }
 
-  &__checkbox:checked ~ .accordion__qa-box > .accordion__question {
+  &__checkbox:checked ~ .accordion__qa-box > label > .accordion__question {
     font-weight: var(--fw-bold);
   }
 }
