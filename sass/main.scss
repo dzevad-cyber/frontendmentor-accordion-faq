@@ -1,3 +1,7 @@
 @use 'abstracts/variables';
 
 @use 'base/reset';
+@use 'base/global';
+
+@use 'compoents/_faq-accordion';
+@use 'compoents/_accordion';

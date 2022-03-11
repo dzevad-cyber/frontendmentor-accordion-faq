@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Kumbh+Sans:wght@400;700&display=swap");
 *,
 *::after,
 *::before {
@@ -13,7 +13,6 @@ html {
 
 body {
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
 }
 
 ul {
@@ -22,6 +21,115 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+:root {
+  --w-mobile: 37.5rem;
+  --w-desktop: 144rem;
+  --ff-kumbh: "Kumbh Sans", sans-serif;
+  --fz-base: 1.6rem;
+  --fz-small: 1.2rem;
+  --fw-regular: 400;
+  --fw-bold: 700;
+  --clr-text-prim: hsl(238, 29%, 16%);
+  --clr-text-sec: hsl(237, 12%, 33%);
+  --clr-text-ter: hsl(240, 6%, 50%);
+  --clr-arrow: hsl(14, 88%, 65%);
+  --clr-divider: hsl(240, 5%, 91%);
+  --bg-prim: hsl(273, 75%, 66%);
+  --bg-sec: hsl(240, 73%, 65%);
+  --bg-faq-accordion: #fff;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: var(--ff-kumbh);
+  background-image: linear-gradient(var(--bg-prim), var(--bg-sec));
+  font-size: var(--fz-small);
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  padding: 5rem 1rem;
+}
+
+.faq-accordion {
+  display: grid;
+  row-gap: 3rem;
+  max-width: var(--w-mobile);
+  background-color: var(--bg-faq-accordion);
+  border-radius: 30px;
+  padding: 2.5rem 2rem;
+}
+.faq-accordion__body {
+  display: grid;
+  justify-items: center;
+  row-gap: 3rem;
+}
+.faq-accordion__title {
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: var(--fw-regular);
+}
+@media (min-width: 62.5em) {
+  .faq-accordion {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.accordion__list {
+  display: grid;
+  row-gap: 2rem;
+}
+.accordion__item {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 2rem;
+  display: grid;
+  grid-template-columns: 1fr min-content;
+  column-gap: 2rem;
+}
+.accordion__qa-box {
+  display: grid;
+  row-gap: 1rem;
+}
+.accordion__answer {
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.3s ease-out, opacity 0.3s ease 0.1s;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  z-index: -100;
+}
+.accordion__btn-wrapper {
+  cursor: pointer;
+}
+.accordion__arrow {
+  all: unset;
+  pointer-events: none;
+  width: 15px;
+  height: 15px;
+}
+.accordion__checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+.accordion__checkbox:checked ~ .accordion__qa-box > .accordion__answer {
+  max-height: 100px;
+  opacity: 1;
+  z-index: 1;
+  color: var(--clr-text-ter);
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -16,14 +16,129 @@
     <title>Frontend Mentor | FAQ Accordion Card</title>
   </head>
   <body>
-    <!-- How many team members can I invite? You can invite up to 2 additional users
-    on the Free plan. There is no limit on team members for the Premium plan.
-    What is the maximum file upload size? No more than 2GB. All files in your
-    account must fit your allotted storage space. How do I reset my password?
-    Click “Forgot password” from the login page or “Change password” from your
-    profile page. A reset link will be emailed to you. Can I cancel my
-    subscription? Yes! Send us a message and we’ll process your request no
-    questions asked. Do you provide additional support? Chat and email support
-    is available 24/7. Phone lines are open during normal business hours. -->
+    <div class="container">
+      <section class="faq-accordion">
+        <header class="faq-accordion__header">
+          <img
+            src="./images/illustration-woman-online-mobile.svg"
+            alt="header illustration"
+            title="woman illustration"
+          />
+        </header>
+        <section class="faq-accordion__body">
+          <h1 class="faq-accordion__title">faq</h1>
+
+          <!-- ### Accordion start -->
+          <article class="accordion">
+            <ul class="accordion__list">
+              <li class="accordion__item">
+                <input
+                  class="accordion__checkbox"
+                  type="checkbox"
+                  name="accordion_chbox"
+                  id="chbox-q1"
+                />
+
+                <!-- qa box -->
+                <section class="accordion__qa-box">
+                  <h3 class="accordion__question">
+                    How many team members can I invite?
+                  </h3>
+                  <p class="accordion__answer">
+                    You can invite up to 2 additional users on the Free plan.
+                    There is no limit on team members for the Premium plan.
+                  </p>
+                </section>
+
+                <!-- arrow -->
+                <label class="accordion__btn-wrapper" for="chbox-q1">
+                  <button class="accordion__arrow">
+                    <img
+                      src="./images/icon-arrow-down.svg"
+                      alt="down arrow"
+                      title="toggle accordion"
+                    />
+                  </button>
+                </label>
+              </li>
+              <li class="accordion__item">
+                <section class="accordion__qa-box">
+                  <h3 class="accordion__question">
+                    What is the maximum file upload size?
+                  </h3>
+                  <p class="accordion__answer">
+                    No more than 2GB. All files in your account must fit your
+                    allotted storage space.
+                  </p>
+                </section>
+                <button class="accordion__arrow">
+                  <img
+                    src="./images/icon-arrow-down.svg"
+                    alt="down arrow"
+                    title="toggle accordion"
+                  />
+                </button>
+              </li>
+              <li class="accordion__item">
+                <section class="accordion__qa-box">
+                  <h3 class="accordion__question">
+                    How do I reset my password?
+                  </h3>
+                  <p class="accordion__answer">
+                    Click “Forgot password” from the login page or “Change
+                    password” from your profile page. A reset link will be
+                    emailed to you.
+                  </p>
+                </section>
+                <button class="accordion__arrow">
+                  <img
+                    src="./images/icon-arrow-down.svg"
+                    alt="down arrow"
+                    title="toggle accordion"
+                  />
+                </button>
+              </li>
+              <li class="accordion__item">
+                <section class="accordion__qa-box">
+                  <h3 class="accordion__question">
+                    Can I cancel my subscription?
+                  </h3>
+                  <p class="accordion__answer">
+                    Yes! Send us a message and we’ll process your request no
+                    questions asked.
+                  </p>
+                </section>
+                <button class="accordion__arrow">
+                  <img
+                    src="./images/icon-arrow-down.svg"
+                    alt="down arrow"
+                    title="toggle accordion"
+                  />
+                </button>
+              </li>
+              <li class="accordion__item">
+                <section class="accordion__qa-box">
+                  <h3 class="accordion__question">
+                    Do you provide additional support?
+                  </h3>
+                  <p class="accordion__answer">
+                    Chat and email support is available 24/7. Phone lines are
+                    open during normal business hours.
+                  </p>
+                </section>
+                <button class="accordion__arrow">
+                  <img
+                    src="./images/icon-arrow-down.svg"
+                    alt="down arrow"
+                    title="toggle accordion"
+                  />
+                </button>
+              </li>
+            </ul>
+          </article>
+        </section>
+        <!-- ### Accordion end -->
+      </section>
+    </div>
   </body>
 </html>

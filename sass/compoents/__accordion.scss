@@ -1,0 +1,57 @@
+.accordion {
+  &__list {
+    display: grid;
+    row-gap: 2rem;
+  }
+
+  &__item {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 2rem;
+
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    column-gap: 2rem;
+  }
+
+  &__qa-box {
+    display: grid;
+    row-gap: 1rem;
+  }
+
+  &__answer {
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.3s ease-out, opacity 0.3s ease 0.1s;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+    z-index: -100;
+  }
+
+  &__btn-wrapper {
+    cursor: pointer;
+  }
+
+  &__arrow {
+    all: unset;
+
+    pointer-events: none;
+    width: 15px;
+    height: 15px;
+  }
+
+  &__checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+
+  &__checkbox:checked ~ .accordion__qa-box > .accordion__answer {
+    max-height: 100px;
+    opacity: 1;
+    z-index: 1;
+    color: var(--clr-text-ter);
+  }
+}

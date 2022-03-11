@@ -1,0 +1,26 @@
+.faq-accordion {
+  display: grid;
+  row-gap: 3rem;
+
+  max-width: var(--w-mobile);
+  background-color: var(--bg-faq-accordion);
+  border-radius: 30px;
+  padding: 2.5rem 2rem;
+
+  &__body {
+    display: grid;
+    justify-items: center;
+    row-gap: 3rem;
+  }
+
+  &__title {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: var(--fw-regular);
+  }
+
+  @media (min-width: 62.5em) {
+    grid-template-columns: 1fr 1fr;
+  }
+}

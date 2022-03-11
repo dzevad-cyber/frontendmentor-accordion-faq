@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+  // widths
+  --w-mobile: 37.5rem;
+  --w-desktop: 144rem;
+
+  //font
+  --ff-kumbh: 'Kumbh Sans', sans-serif;
+
+  --fz-base: 1.6rem;
+  --fz-small: 1.2rem;
+
+  --fw-regular: 400;
+  --fw-bold: 700;
+
+  // colors
+  --clr-text-prim: hsl(238, 29%, 16%);
+  --clr-text-sec: hsl(237, 12%, 33%);
+  --clr-text-ter: hsl(240, 6%, 50%);
+  --clr-arrow: hsl(14, 88%, 65%);
+  --clr-divider: hsl(240, 5%, 91%);
+
+  --bg-prim: hsl(273, 75%, 66%);
+  --bg-sec: hsl(240, 73%, 65%);
+  --bg-faq-accordion: #fff;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: var(--ff-kumbh);
+  background-image: linear-gradient(var(--bg-prim), var(--bg-sec));
+  font-size: var(--fz-small);
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+
+  display: grid;
+  place-content: center;
+  padding: 5rem 1rem;
+}
