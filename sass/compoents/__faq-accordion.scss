@@ -1,11 +1,10 @@
 .faq-accordion {
   display: grid;
   row-gap: 3rem;
-
   max-width: var(--w-mobile);
   background-color: var(--bg-faq-accordion);
   border-radius: 30px;
-  padding: 2.5rem 2rem;
+  padding: 2.5rem 4rem 6rem 4rem;
   position: relative;
 
   &--box {
